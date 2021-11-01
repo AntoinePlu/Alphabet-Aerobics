@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Inter */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/Inter-Regular.woff2?v=3.19") format("woff2"),
+    url("/assets/Inter-Regular.woff?v=3.19") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/Inter-SemiBold.woff2?v=3.19") format("woff2"),
+    url("/assets/Inter-SemiBold.woff?v=3.19") format("woff");
+}
+
+/* Trump Gothic */
+@font-face {
+  font-family: "Trump Gothic";
+  font-weight: 700;
+  src: url("/assets/TrumpGothicEastBold.woff") format("woff"),
+    url("/assets/TrumpGothicEastBold.ttf") format("ttf");
+}
+
+/* Custom utilities */
+
+@layer utilities {
+  .narrow-width {
+    @apply max-w-screen-lg mx-auto;
+  }
+
+  .full-width {
+    @apply max-w-screen-xl mx-auto;
+  }
+
+  .with-illustration {
+    background-image: url("/assets/images/home.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+body {
+  @apply full-width bg-black text-white-100 font-inter leading-normal mb-32;
+}
