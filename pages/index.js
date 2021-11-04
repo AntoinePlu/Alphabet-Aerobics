@@ -1,11 +1,21 @@
+import { useEffect } from "react";
 import Head from "next/head";
 
 export default function Home() {
+  useEffect(() => {
+    document.body.classList.add("with-illustration");
+
+    return () => {
+      document.body.classList.remove("with-illustration");
+    };
+  });
+
   return (
     <>
       <Head>
         <body className="with-illustration" />
       </Head>
+
       <header className="narrow-width mx-auto grid grid-cols-2">
         <h2 className="col-start-1 uppercase text-white-60 text-xl">
           Hey I&apos;m Antoine.
