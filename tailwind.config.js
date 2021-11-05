@@ -10,6 +10,9 @@ module.exports = {
       spacing: {
         "2px": "2px",
       },
+      minWidth: {
+        8: "2rem",
+      },
     },
     colors: {
       transparent: "rgba(255, 255, 255, 0)",

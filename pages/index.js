@@ -27,6 +27,23 @@ export default function Home() {
             <span>Sports and Gaming</span>
           </div>
         </h1>
+        <div className="col-start-1 mt-8">
+          <a href="mailto:hey at antoineplu.co" className="block w-max">
+            <div
+              aria-hidden="true"
+              className="z-[-1] absolute w-max h-9 bg-gradient-to-r from-orange to-yellow rounded blur text-transparent opacity-40"
+            >
+              <div className="invisible flex items-center justify-center h-full px-5 uppercase text-sm font-bold leading-9">
+                hey at antoineplu.co
+              </div>
+            </div>
+            <div className="p-px bg-gradient-to-r from-orange to-yellow rounded">
+              <div className="flex items-center justify-center h-full px-5 rounded uppercase text-sm font-bold leading-9 bg-black text-white-80">
+                hey at antoineplu.co
+              </div>
+            </div>
+          </a>
+        </div>
       </header>
     </>
   );
