@@ -46,6 +46,8 @@
   }
 }
 
-body {
-  @apply full-width bg-black text-white-100 font-inter leading-normal mb-32;
+html,
+body,
+#__next {
+  @apply w-full min-h-screen;
 }

@@ -12,10 +12,6 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <body className="with-illustration" />
-      </Head>
-
       <header className="narrow-width mx-auto grid grid-cols-2">
         <h2 className="col-start-1 uppercase text-white-60 text-xl">
           Hey I&apos;m Antoine.
