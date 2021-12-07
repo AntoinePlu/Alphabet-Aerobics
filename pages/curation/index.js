@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Hero from "lib/components/Hero";
 import supabase from "lib/supabase";
 
@@ -46,9 +48,11 @@ export default function Curation({ categories }) {
       <section className="grid grid-cols-3 gap-4">
         {categories.map((category) => (
           <div key={category.id}>
-            <img
+            <Image
               src={category.iconUrl}
               alt={`${category.name} category cover image`}
+              width={364}
+              height={273}
             />
             <div className="p-2 text-white-60">
               See{" "}
