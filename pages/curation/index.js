@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Hero from "lib/components/Hero";
+import Hero from "components/Hero";
 import supabase from "lib/supabase";
 
 export async function getStaticProps() {

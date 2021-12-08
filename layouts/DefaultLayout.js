@@ -1,7 +1,7 @@
 import Head from "next/head";
 import clsx from "clsx";
 
-import NavBar from "lib/components/NavBar";
+import NavBar from "components/NavBar";
 
 const DEFAULT_CLASSNAME =
   "min-h-screen bg-black text-white-100 font-inter leading-normal pb-32";

@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import clsx from "clsx";
 
-import CogIcon from "./icons/CogIcon";
-import TwitterIcon from "./icons/TwitterIcon";
-import DribbbleIcon from "./icons/DribbbleIcon";
-import SpotifyIcon from "./icons/SpotifyIcon";
+import CogIcon from "components/icons/CogIcon";
+import TwitterIcon from "components/icons/TwitterIcon";
+import DribbbleIcon from "components/icons/DribbbleIcon";
+import SpotifyIcon from "components/icons/SpotifyIcon";
 
 const MENU = [
   { label: "Home", path: "/", exact: true },

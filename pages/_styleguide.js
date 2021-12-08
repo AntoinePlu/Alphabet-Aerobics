@@ -1,5 +1,5 @@
-import StyleguideLayout from "lib/layouts/StyleguideLayout";
-import * as fixtures from "lib/components/fixtures";
+import StyleguideLayout from "layouts/StyleguideLayout";
+import * as fixtures from "components/fixtures";
 
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 

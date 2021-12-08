@@ -1,4 +1,4 @@
-import DefaultLayout from "lib/layouts/DefaultLayout";
+import DefaultLayout from "layouts/DefaultLayout";
 
 import "styles/globals.css";
 
