@@ -4,9 +4,12 @@ import clsx from "clsx";
 import NavBar from "components/NavBar";
 
 const DEFAULT_CLASSNAME =
-  "min-h-screen bg-black text-white-100 font-inter leading-normal pb-32";
+  "min-h-screen bg-black text-white-100 font-inter leading-normal";
 
-export default function Layout({ className: classNameOverload, children }) {
+export default function DefaultLayout({
+  className: classNameOverload,
+  children,
+}) {
   const className = clsx(DEFAULT_CLASSNAME, classNameOverload);
 
   return (

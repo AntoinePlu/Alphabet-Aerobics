@@ -35,11 +35,11 @@
     @apply max-w-screen-lg mx-auto;
   }
 
-  .full-width {
+  .wide-width {
     @apply max-w-screen-xl mx-auto;
   }
 
-  .with-illustration {
+  .bg-wave-home {
     background-image: url("/assets/images/home.svg");
     background-size: cover;
     background-repeat: no-repeat;

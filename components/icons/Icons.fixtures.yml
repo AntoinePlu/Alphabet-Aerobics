@@ -1,0 +1,12 @@
+component: Icons
+examples:
+  - title: "Cog"
+    code: <CogIcon />
+  - title: "Dribbble"
+    code: <DribbbleIcon />
+  - title: "Rss"
+    code: <RssIcon />
+  - title: "Spotify"
+    code: <SpotifyIcon />
+  - title: "Twitter"
+    code: <TwitterIcon />

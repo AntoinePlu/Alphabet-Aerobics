@@ -1,0 +1,15 @@
+component: Link
+description: >
+  An internal or external link.
+examples:
+  - title: "Internal"
+    code: <Link href="/">Home page</Link>
+
+  - title: "External"
+    code: <Link href="https://google.com">Google</Link>
+
+  - title: "Backward hint"
+    code: <Link hint="back" href="#">Go back</Link>
+
+  - title: "Forward hint"
+    code: <Link hint="forward" href="#">Suggest a link</Link>

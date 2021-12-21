@@ -2,14 +2,6 @@ import { useEffect } from "react";
 import Head from "next/head";
 
 export default function Home() {
-  useEffect(() => {
-    document.body.classList.add("with-illustration");
-
-    return () => {
-      document.body.classList.remove("with-illustration");
-    };
-  });
-
   return (
     <>
       <header className="narrow-width mx-auto grid grid-cols-2">
@@ -44,3 +36,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.layoutProps = {
+  className: "bg-wave-home",
+};

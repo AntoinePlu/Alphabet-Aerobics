@@ -1,15 +1,17 @@
+import { Fragment } from "react";
 import DefaultLayout from "layouts/DefaultLayout";
 
 import "styles/globals.css";
 
-function MyApp({ Component, pageProps }) {
-  const Layout = Component.Layout ?? DefaultLayout;
+export default function MyApp({ Component, pageProps }) {
+  const Layout =
+    Component.Layout === null ? NullLayout : Component.Layout ?? DefaultLayout;
 
   return (
-    <Layout {...Component.layoutProps}>
+    <Layout {...Component.layoutProps} pageProps={pageProps}>
       <Component {...pageProps} />
     </Layout>
   );
 }
 
-export default MyApp;
+const NullLayout = ({ children, key }) => <Fragment {...{ children, key }} />;
