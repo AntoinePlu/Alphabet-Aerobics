@@ -1,13 +1,8 @@
+import BaseIcon from "./BaseIcon";
+
 export default function RssIcon({ ...props }) {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <BaseIcon width="20" height="20" viewBox="0 0 20 20" {...props}>
       <path
         d="M3 19C4.10457 19 5 18.1046 5 17C5 15.8954 4.10457 15 3 15C1.89543 15 1 15.8954 1 17C1 18.1046 1.89543 19 3 19Z"
         stroke="currentColor"
@@ -32,6 +27,6 @@ export default function RssIcon({ ...props }) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
+    </BaseIcon>
   );
 }

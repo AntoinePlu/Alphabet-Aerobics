@@ -1,7 +1,26 @@
-export default function Key(props) {
+import clsx from "clsx";
+
+export default function Key({ disabled, ...props }) {
   return (
     <span
-      className="inline-flex justify-center items-center min-w-8 px-2 h-8 leading-8 text-center rounded-md bg-gray-dark font-semibold text-sm border border-white-4 text-white-80"
+      className={clsx(
+        `
+        box
+        inline-flex
+        justify-center
+        items-center
+        min-w-8
+        h-8
+        leading-8
+        rounded-md
+        font-semibold
+        text-sm
+        `,
+        {
+          "text-white-100": !disabled,
+          "text-white-40": disabled,
+        }
+      )}
       {...props}
     />
   );

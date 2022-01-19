@@ -1,6 +1,5 @@
 module.exports = {
-  mode: "jit",
-  purge: [
+  content: [
     "./pages/**/*.js",
     "./lib/**/*.js",
     "./components/**/*.js",
@@ -24,13 +23,14 @@ module.exports = {
       black: "#111111",
       gray: {
         dark: "#1f2022",
-        mid: "#202020",
+        mid: "#2c2d2e",
         highlight: "#4e5055",
         light: "#c4c4c4",
       },
       white: {
         4: "rgba(255, 255, 255, 0.04)",
         10: "rgba(255, 255, 255, 0.1)",
+        40: "rgba(255, 255, 255, 0.4)",
         60: "rgba(255, 255, 255, 0.6)",
         80: "rgba(255, 255, 255, 0.8)",
         100: "#ffffff",

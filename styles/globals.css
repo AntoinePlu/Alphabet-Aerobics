@@ -44,6 +44,14 @@
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  .box {
+    @apply px-2 bg-gray-dark border border-white-4 rounded-md;
+  }
+
+  .heading {
+    @apply uppercase font-trump-gothic tracking-wide text-white-100;
+  }
 }
 
 html,

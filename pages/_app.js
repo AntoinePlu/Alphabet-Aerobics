@@ -5,7 +5,7 @@ import "styles/globals.css";
 
 export default function MyApp({ Component, pageProps }) {
   const Layout =
-    Component.Layout === null ? NullLayout : Component.Layout ?? DefaultLayout;
+    Component.layout === null ? NullLayout : Component.layout ?? DefaultLayout;
 
   return (
     <Layout {...Component.layoutProps} pageProps={pageProps}>

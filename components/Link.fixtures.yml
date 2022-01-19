@@ -2,14 +2,26 @@ component: Link
 description: >
   An internal or external link.
 examples:
-  - title: "Internal"
+  - title: "Default"
     code: <Link href="/">Home page</Link>
 
-  - title: "External"
-    code: <Link href="https://google.com">Google</Link>
-
-  - title: "Backward hint"
+  - title: "Hint backwards"
     code: <Link hint="back" href="#">Go back</Link>
 
-  - title: "Forward hint"
+  - title: "Hint forward"
     code: <Link hint="forward" href="#">Suggest a link</Link>
+
+  - title: "Bold"
+    code: <Link bold href="#">Suggest a link</Link>
+
+  - title: "Underlined"
+    code: <Link underlined href="#">Suggest a link</Link>
+
+  - title: "Combined"
+    code: |
+      <p>
+        See{" "}
+        <Link bold underlined hint="forward" href="#" >
+          Collection
+        </Link>
+      </p>
