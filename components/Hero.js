@@ -1,4 +1,4 @@
-import RssIcon from "lib/components/icons/RssIcon";
+import RssIcon from "components/icons/RssIcon";
 
 export default function Hero({ title, children }) {
   return (

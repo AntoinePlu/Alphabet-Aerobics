@@ -3,10 +3,10 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import clsx from "clsx";
 
-import CogIcon from "./icons/CogIcon";
-import TwitterIcon from "./icons/TwitterIcon";
-import DribbbleIcon from "./icons/DribbbleIcon";
-import SpotifyIcon from "./icons/SpotifyIcon";
+import CogIcon from "components/icons/CogIcon";
+import TwitterIcon from "components/icons/TwitterIcon";
+import DribbbleIcon from "components/icons/DribbbleIcon";
+import SpotifyIcon from "components/icons/SpotifyIcon";
 
 const MENU = [
   { label: "Home", path: "/", exact: true },
@@ -31,7 +31,7 @@ export default function NavBar() {
   );
 
   return (
-    <header className="narrow-width h-8 mt-20 mb-32 leading-tight uppercase flex items-center space-x-4">
+    <header className="narrow-width h-8 pt-20 mb-32 leading-tight uppercase flex items-center space-x-4">
       <TextWithKey
         onClick={toggleMenuOpen}
         keyText={isMenuOpen ? "Esc" : "M"}

@@ -1,0 +1,13 @@
+component: Key
+description: >
+  Display a hint to a keyboard shortcut or an actionable element.
+examples:
+  - title: "With single character text"
+    code: <Key>Q</Key>
+  - title: "With multi character text"
+    code: <Key>Esc</Key>
+  - title: "With icon"
+    code: >-
+      <Key>
+        <CogIcon />
+      </Key>

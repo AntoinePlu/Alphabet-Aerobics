@@ -1,0 +1,45 @@
+component: Menu
+description: >
+  A list of selectable entries.
+examples:
+  - title: "Simple"
+    code: |
+      <Menu>
+        {["First entry", "Second entry", "Last entry"].map((entry) => (
+          <Menu.Item href="#" key={entry}>
+            {entry}
+          </Menu.Item>
+        ))}
+      </Menu>
+  - title: "With icon (left)"
+    code: |
+      <Menu>
+        {["First entry", "Second entry", "Last entry"].map((entry) => (
+          <Menu.Item href="#" key={entry} iconLeft={() => <CogIcon />}>
+            {entry}
+          </Menu.Item>
+        ))}
+      </Menu>
+  - title: "With icon (right)"
+    code: |
+      <Menu>
+        {["First entry", "Second entry", "Last entry"].map((entry) => (
+          <Menu.Item href="#" key={entry} iconRight={() => <RssIcon />}>
+            {entry}
+          </Menu.Item>
+        ))}
+      </Menu>
+  - title: "With icons (both sides)"
+    code: |
+      <Menu>
+        {["First entry", "Second entry", "Last entry"].map((entry) => (
+          <Menu.Item 
+            href="#" 
+            key={entry} 
+            iconLeft={() => <CogIcon />} 
+            iconRight={() => <RssIcon />}
+          >
+            {entry}
+          </Menu.Item>
+        ))}
+      </Menu>
