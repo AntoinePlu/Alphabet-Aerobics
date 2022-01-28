@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
-import sortBy from "lib/sortBy";
+import { sortBy } from "lib/helpers";
 import * as components from "components";
 
 const { Menu } = components;

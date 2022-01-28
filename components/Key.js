@@ -15,6 +15,7 @@ export default function Key({ disabled, ...props }) {
         rounded-md
         font-semibold
         text-sm
+        space-x-2
         `,
         {
           "text-white-100": !disabled,
