@@ -16,7 +16,7 @@ const MENU = [
 
 export default function AdminMenu({ currentRoute, submenu }) {
   return (
-    <aside className="w-80 mt-32 pl-16 space-y-2">
+    <aside className="sticky top-4 self-start w-80 mt-32 pl-16 space-y-2">
       <p>
         <Link className="text-xs text-white/60" href={routes.home}>
           &larr; Back to home
