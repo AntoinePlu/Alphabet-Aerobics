@@ -2,11 +2,18 @@ module.exports = {
   content: [
     "./pages/**/*.js",
     "./lib/**/*.js",
-    "./components/**/*.js",
+    "./components/**/*.{js,yml}",
     "./layouts/**/*.js",
   ],
   theme: {
     extend: {
+      opacity: {
+        4: ".04",
+        10: ".1",
+        40: ".4",
+        60: ".6",
+        80: ".8",
+      },
       fontFamily: {
         "trump-gothic": ["Trump Gothic"],
         inter: ["Inter"],
@@ -27,14 +34,9 @@ module.exports = {
         highlight: "#4e5055",
         light: "#c4c4c4",
       },
-      white: {
-        4: "rgba(255, 255, 255, 0.04)",
-        10: "rgba(255, 255, 255, 0.1)",
-        40: "rgba(255, 255, 255, 0.4)",
-        60: "rgba(255, 255, 255, 0.6)",
-        80: "rgba(255, 255, 255, 0.8)",
-        100: "#ffffff",
-      },
+      red: "#de544f",
+      green: "#0fa958",
+      white: "#ffffff",
       yellow: "#ffac30",
       orange: "#df5b22",
       purple: "#8c35fb",

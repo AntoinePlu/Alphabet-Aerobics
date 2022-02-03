@@ -3,7 +3,7 @@ import DefaultLayout from "layouts/DefaultLayout";
 
 import "styles/globals.css";
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps, ...rest }) {
   const Layout =
     Component.layout === null ? NullLayout : Component.layout ?? DefaultLayout;
 

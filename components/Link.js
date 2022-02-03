@@ -1,29 +1,32 @@
+import { forwardRef } from "react";
 import NextLink from "next/link";
 import clsx from "clsx";
 
+import Button from "./Button";
+
 export default function Link({
-  bold,
+  as: Component = "a",
   children,
-  hint,
   href,
-  underlined,
   className,
   ...props
 }) {
   return (
-    <NextLink href={href}>
-      <a
-        {...props}
-        className={clsx(
-          "text-white-100",
-          { "space-x-1": hint, "font-semibold": bold },
-          className
-        )}
-      >
-        {hint === "back" && <span>&larr;</span>}
-        <span className={underlined ? "underline" : ""}>{children}</span>
-        {hint === "forward" && <span>&rarr;</span>}
-      </a>
+    <NextLink passHref href={String(href)}>
+      <Component {...props} className={clsx("text-white", className)}>
+        {children}
+      </Component>
     </NextLink>
   );
 }
+
+Link.Button = function LinkButton(props) {
+  return (
+    <Link
+      as={forwardRef((linkProps, ref) => (
+        <Button ref={ref} as="a" {...linkProps} />
+      ))}
+      {...props}
+    />
+  );
+};

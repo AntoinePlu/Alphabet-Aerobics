@@ -1,8 +1,8 @@
 export default function Home() {
   return (
     <>
-      <header className="narrow-width mx-auto grid grid-cols-2 text-white-100">
-        <h2 className="col-start-1 uppercase text-white-60 text-xl leading-tight">
+      <header className="narrow-width mx-auto grid grid-cols-2 text-white">
+        <h2 className="col-start-1 uppercase text-white/60 text-xl leading-tight">
           Hey I&apos;m Antoine.
         </h2>
         <h1 className="col-start-1 text-5xl uppercase font-trump-gothic leading-tight tracking-wide flex flex-col items-start mt-2">

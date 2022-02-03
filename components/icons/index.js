@@ -1,4 +1,5 @@
 export { default as BookOpenIcon } from "./BookOpenIcon";
+export { default as CheckPlainIcon } from "./CheckPlainIcon";
 export { default as CogIcon } from "./CogIcon";
 export { default as DribbbleIcon } from "./DribbbleIcon";
 export { default as LibraryIcon } from "./LibraryIcon";

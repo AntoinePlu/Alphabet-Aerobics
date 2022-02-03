@@ -1,0 +1,10 @@
+- id: sorare
+  name: Sorare
+  description: The NFT Panini cards
+  featured: true
+- id: icons
+  name: Icons
+  description: Slick icons
+- id: data-table
+  name: Data Table
+  description: Gorgeous data visualizations

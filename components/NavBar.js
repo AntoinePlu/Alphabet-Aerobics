@@ -115,7 +115,7 @@ function TextWithKey({ as: Component = "button", keyText, text, ...props }) {
 function SettingsButton(props) {
   return (
     <button
-      className="inline-flex justify-center items-center px-3 h-8 space-x-2 leading-8 text-center rounded-md bg-gray-dark font-semibold text-sm border border-white-4 text-white-80 hover:bg-gray-highlight hover:border-white-10"
+      className="inline-flex justify-center items-center px-3 h-8 space-x-2 leading-8 text-center rounded-md bg-gray-dark font-semibold text-sm border border-white/4 text-white/80 hover:bg-gray-highlight hover:border-white/10"
       {...props}
     >
       <CogIcon />
@@ -127,7 +127,7 @@ function SettingsButton(props) {
 function Key(props) {
   return (
     <span
-      className="inline-flex justify-center items-center min-w-8 px-2 h-8 leading-8 text-center rounded-md bg-gray-dark font-semibold text-sm border border-white-4 text-white-80"
+      className="inline-flex justify-center items-center min-w-8 px-2 h-8 leading-8 text-center rounded-md bg-gray-dark font-semibold text-sm border border-white/4 text-white/80"
       {...props}
     />
   );

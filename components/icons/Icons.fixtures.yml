@@ -1,12 +1,13 @@
 component: Icons
 examples:
-  - title: "Cog"
-    code: <CogIcon />
-  - title: "Dribbble"
-    code: <DribbbleIcon />
-  - title: "Rss"
-    code: <RssIcon />
-  - title: "Spotify"
-    code: <SpotifyIcon />
-  - title: "Twitter"
-    code: <TwitterIcon />
+  - title: "Available Icons"
+    code: |
+      <div className="inline-grid grid-cols-4 gap-4 items-center">
+        <BookOpenIcon />
+        <CogIcon />
+        <DribbbleIcon />
+        <LibraryIcon />
+        <RssIcon />
+        <SpotifyIcon />
+        <TwitterIcon />
+      </div>
