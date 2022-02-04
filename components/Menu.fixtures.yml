@@ -11,6 +11,22 @@ examples:
           </Menu.Item>
         ))}
       </Menu>
+  - title: "Categories"
+    code: |
+      <Menu>
+        <Menu.Category name="Entries" />
+        {["First entry", "Second entry", "Third entry"].map((entry) => (
+          <Menu.Item href="#" key={entry}>
+            {entry}
+          </Menu.Item>
+        ))}
+        <Menu.Category name="More Entries" />
+        {["Fourth entry", "Fifth entry", "Last entry"].map((entry) => (
+          <Menu.Item href="#" key={entry}>
+            {entry}
+          </Menu.Item>
+        ))}
+      </Menu>
   - title: "With icon (left)"
     code: |
       <Menu>

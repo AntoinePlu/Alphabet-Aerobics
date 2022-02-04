@@ -18,40 +18,37 @@ export default function DesignSystem({ fixtures }) {
   });
 
   return (
-    <main className="flex-1 p-16 space-y-8">
-      <h1 className="heading text-6xl">Design System</h1>
-      <div className="space-y-16 max-w-screen-xl">
-        {fixtures.map(({ component, description, examples }) => (
-          <section key={component} className="space-y-4" id={`${component}`}>
-            <header className="space-y-2">
-              <h2 className="heading text-4xl">{component}</h2>
-              {description ? <h3 className="text-lg">{description}</h3> : null}
-            </header>
-            <ul className="space-y-4">
-              {examples.map((example) => (
-                <li key={example.title} className="space-y-2">
-                  <h3 className="text-white/80 font-bold">{example.title}</h3>
-                  <p>{example.description}</p>
-                  <div className="space-y-2">
-                    <LiveProvider code={example.code} scope={components}>
-                      <div className="w-full flex gap-4">
-                        <div className="flex-1 rounded-md border border-white/4 bg-gray-dark p-2">
-                          <LiveEditor />
-                        </div>
-                        <div className="flex-1 rounded-md border border-white/10 p-4">
-                          <LivePreview />
-                        </div>
+    <div className="space-y-16">
+      {fixtures.map(({ component, description, examples }) => (
+        <section key={component} className="space-y-4" id={`${component}`}>
+          <header className="space-y-2">
+            <h2 className="heading text-4xl">{component}</h2>
+            {description ? <h3 className="text-lg">{description}</h3> : null}
+          </header>
+          <ul className="space-y-4">
+            {examples.map((example) => (
+              <li key={example.title} className="space-y-2">
+                <h3 className="text-white/80 font-bold">{example.title}</h3>
+                <p>{example.description}</p>
+                <div className="space-y-2">
+                  <LiveProvider code={example.code} scope={components}>
+                    <div className="w-full flex gap-4">
+                      <div className="flex-1 rounded-md border border-white/4 bg-gray-dark p-2">
+                        <LiveEditor />
                       </div>
-                      <LiveError className="text-xs p-4 text-orange border-orange border" />
-                    </LiveProvider>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
-    </main>
+                      <div className="flex-1 rounded-md border border-white/10 p-4">
+                        <LivePreview />
+                      </div>
+                    </div>
+                    <LiveError className="text-xs p-4 text-orange border-orange border" />
+                  </LiveProvider>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
   );
 }
 
@@ -76,11 +73,14 @@ export const getStaticProps = notFoundInProduction(async () => {
   return {
     props: {
       fixtures: sortedFixtures,
-      submenu: sortedFixtures.map(({ component }) => ({
-        key: component,
-        href: `#${component}`,
-        children: component,
-      })),
+      submenu: {
+        title: "Components",
+        items: sortedFixtures.map(({ component }) => ({
+          key: component,
+          href: `#${component}`,
+          children: component,
+        })),
+      },
     },
   };
 });
@@ -88,6 +88,7 @@ export const getStaticProps = notFoundInProduction(async () => {
 DesignSystem.layout = AdminLayout;
 DesignSystem.layoutProps = {
   currentRoute: routes.admin.designSystem,
+  pageTitle: "Design System",
   metadata: {
     title: "Design System - Admin - Alphabet Aerobics",
   },

@@ -42,7 +42,8 @@ export default function AdminMenu({ currentRoute, submenu }) {
         </Menu>
         {submenu ? (
           <Menu>
-            {submenu.map(({ key, href, children }) => (
+            {submenu.title ? <Menu.Category name={submenu.title} /> : null}
+            {submenu.items.map(({ key, href, children }) => (
               <Menu.Item
                 key={key}
                 className="group"

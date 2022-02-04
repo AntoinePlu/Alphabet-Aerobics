@@ -36,3 +36,11 @@ Menu.Item = function MenuItem({
     </li>
   );
 };
+
+Menu.Category = function MenuCategory({ name }) {
+  return (
+    <li className="text-xs uppercase px-3 pt-2 !mt-2 first:!mt-0 text-white/60">
+      {name}
+    </li>
+  );
+};

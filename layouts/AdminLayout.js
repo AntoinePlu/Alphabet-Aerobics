@@ -11,6 +11,7 @@ export default function AdminLayout({
   currentRoute,
   metadata = {},
   pageProps,
+  pageTitle,
 }) {
   return (
     <DefaultLayout
@@ -23,7 +24,10 @@ export default function AdminLayout({
     >
       <div className="flex bg-black">
         <AdminMenu currentRoute={currentRoute} submenu={pageProps.submenu} />
-        {children}
+        <main className="flex-1 p-16 space-y-8">
+          <h1 className="heading text-6xl">{pageTitle}</h1>
+          <div className="max-w-screen-xl">{children}</div>
+        </main>
       </div>
     </DefaultLayout>
   );
