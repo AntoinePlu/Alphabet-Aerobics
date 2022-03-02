@@ -21,7 +21,7 @@ const SOCIAL = [
   { label: "Spotify", url: "" },
 ];
 
-export default function NavBar() {
+export default function NavBar({ className }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
   const toggleMenuOpen = () => setIsMenuOpen((isOpen) => !isOpen);
@@ -31,7 +31,12 @@ export default function NavBar() {
   );
 
   return (
-    <header className="w-full narrow-width h-8 pt-20 mb-32 leading-tight uppercase flex items-center space-x-4">
+    <header
+      className={clsx(
+        "mt-16 mb-32 leading-tight uppercase flex items-center space-x-4",
+        className
+      )}
+    >
       <TextWithKey
         onClick={toggleMenuOpen}
         keyText={isMenuOpen ? "Esc" : "M"}

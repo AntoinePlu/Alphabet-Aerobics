@@ -1,9 +1,15 @@
+import clsx from "clsx";
+
 import routes from "lib/routes";
 
 import Menu from "./Menu";
 import Link from "./Link";
 
 const MENU = [
+  {
+    route: routes.admin,
+    label: "Control Center",
+  },
   {
     route: routes.admin.collections,
     label: "Collections",
@@ -14,12 +20,12 @@ const MENU = [
   },
 ];
 
-export default function AdminMenu({ currentRoute, submenu }) {
+export default function AdminMenu({ className, currentRoute, submenu }) {
   return (
-    <aside className="sticky top-4 self-start w-80 mt-32 pl-16 space-y-2">
-      <p>
+    <aside className={clsx("space-y-2", className)}>
+      <p className="h-8 mt-4">
         <Link className="text-xs text-white/60" href={routes.home}>
-          &larr; Back to home
+          &larr; Back to website
         </Link>
       </p>
       <div className="space-y-4">

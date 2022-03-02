@@ -14,12 +14,14 @@ export default function DefaultLayout({
 
       <div
         className={clsx(
-          `min-h-screen pb-16 flex flex-col items-stretch bg-black text-white font-inter leading-normal`,
+          `min-h-screen bg-black text-white font-inter leading-normal`,
           className
         )}
       >
-        {navBar && <NavBar />}
-        <main className="flex-1">{children}</main>
+        <div className="max-w-screen-xl min-h-screen mx-auto main-grid auto-rows-min">
+          {navBar && <NavBar className="col-span-narrow" />}
+          {children}
+        </div>
       </div>
 
       <AdminTools />

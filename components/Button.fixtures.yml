@@ -11,6 +11,8 @@ examples:
       <Button>
         <CogIcon />
       </Button>
+  - title: "Primary (CTA)"
+    code: <Button primary>Do stuff</Button>
   - title: "With icon and text"
     code: >-
       <Button>

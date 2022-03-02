@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <>
-      <header className="narrow-width mx-auto grid grid-cols-2 text-white">
+    <main className="col-span-full main-grid">
+      <header className="col-span-narrow grid grid-cols-2 text-white">
         <h2 className="col-start-1 uppercase text-white/60 text-xl leading-tight">
           Hey I&apos;m Antoine.
         </h2>
@@ -30,7 +30,7 @@ export default function Home() {
           </a>
         </div>
       </header>
-    </>
+    </main>
   );
 }
 

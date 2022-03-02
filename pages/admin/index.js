@@ -1,15 +1,22 @@
 import AdminLayout from "layouts/AdminLayout";
 import { notFoundInProduction } from "lib/helpers";
+import routes from "lib/routes";
 
-export default function Admin() {
-  return <>Admin home, nothing to see here yet</>;
+export default function ControlCenter() {
+  return (
+    <>
+      <p>Nothing to see here yet</p>
+    </>
+  );
 }
 
 export const getStaticProps = notFoundInProduction();
 
-Admin.layoutProps = {
+ControlCenter.layoutProps = {
+  currentRoute: routes.admin,
+  pageTitle: "Control Center",
   metadata: {
-    title: "Admin - Alphabet Aerobics",
+    title: "Control Center - Alphabet Aerobics",
   },
 };
-Admin.layout = AdminLayout;
+ControlCenter.layout = AdminLayout;

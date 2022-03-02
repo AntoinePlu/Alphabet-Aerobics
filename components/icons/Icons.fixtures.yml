@@ -1,6 +1,6 @@
 component: Icons
 examples:
-  - title: "Available Icons"
+  - title: "Custom Icons"
     code: |
       <div className="inline-grid grid-cols-4 gap-4 items-center">
         <BookOpenIcon />

@@ -1,8 +1,11 @@
 export { default as BookOpenIcon } from "./BookOpenIcon";
 export { default as CheckPlainIcon } from "./CheckPlainIcon";
+export { default as ChipIcon } from "./ChipIcon";
 export { default as CogIcon } from "./CogIcon";
 export { default as DribbbleIcon } from "./DribbbleIcon";
+export { default as EyeIcon } from "./EyeIcon";
 export { default as LibraryIcon } from "./LibraryIcon";
+export { default as PlusIcon } from "./PlusIcon";
 export { default as RssIcon } from "./RssIcon";
 export { default as SpotifyIcon } from "./SpotifyIcon";
 export { default as StarIcon } from "./StarIcon";

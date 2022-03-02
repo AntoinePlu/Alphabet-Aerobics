@@ -1,8 +1,9 @@
 import { forwardRef } from "react";
-import clsx from "clsx";
+
+import clsx from "lib/clsx";
 
 export default forwardRef(function Button(
-  { as: Component = "button", className, disabled, ...props },
+  { as: Component = "button", className, primary, disabled, ...props },
   ref
 ) {
   return (
@@ -11,6 +12,7 @@ export default forwardRef(function Button(
       className={clsx(
         `
         box
+        focusable
         inline-flex
         justify-center
         items-center
@@ -27,6 +29,7 @@ export default forwardRef(function Button(
         {
           "text-white": !disabled,
           "text-white/40": disabled,
+          "!bg-orange": primary,
         },
         className
       )}

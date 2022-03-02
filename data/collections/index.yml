@@ -1,10 +1,10 @@
-- id: sorare
+- slug: sorare
   name: Sorare
   description: The NFT Panini cards
   featured: true
-- id: icons
+- slug: icons
   name: Icons
   description: Slick icons
-- id: data-table
+- slug: data-table
   name: Data Table
   description: Gorgeous data visualizations

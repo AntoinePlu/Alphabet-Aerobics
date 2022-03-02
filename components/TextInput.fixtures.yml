@@ -1,0 +1,6 @@
+component: TextInput
+description: >
+  A basic text input component
+examples:
+  - title: "Default"
+    code: <TextInput />
