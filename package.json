@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@keystatic/core": "^0.0.111",
+    "@keystatic/next": "^0.0.11",
     "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
