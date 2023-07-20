@@ -17,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("dark p-4", inter.className)}>
+      <body
+        className={cn("dark p-4 flex min-h-screen gap-x-4", inter.className)}
+      >
         <nav>
           <form>
             <input type="search" placeholder="Search" name="search" />
@@ -34,7 +36,9 @@ export default function RootLayout({
           </section>
         </nav>
 
-        <main>{children}</main>
+        <main className="bg-apee-darkGray rounded-3xl flex-1 flex flex-col">
+          {children}
+        </main>
       </body>
     </html>
   );

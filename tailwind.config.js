@@ -17,6 +17,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        apee: {
+          black: "hsl(0, 0%, 7%)",
+          darkGray: "hsl(0, 0%, 9%)",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
