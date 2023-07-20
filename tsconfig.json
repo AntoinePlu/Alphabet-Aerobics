@@ -20,7 +20,8 @@
       }
     ],
     "paths": {
-      "@apee/*": ["./src/*"]
+      "@apee/*": ["./src/*"],
+      "keystatic.config": ["keystatic.config"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

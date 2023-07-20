@@ -10,7 +10,10 @@ export default config({
       label: "Homepage",
       path: "src/content/_homepage",
       schema: {
-        headline: fields.text({ label: "Headline" }),
+        intro: fields.text({ label: "Intro" }),
+        jobTitle: fields.text({ label: "Job Title" }),
+        catchphrase: fields.text({ label: "Catchprase" }),
+        email: fields.text({ label: "Email" }),
       },
     }),
   },
