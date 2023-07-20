@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cn("dark", inter.className)}>
+      <body className={cn("dark p-4", inter.className)}>
         <nav>
           <form>
             <input type="search" placeholder="Search" name="search" />
@@ -33,6 +33,7 @@ export default function RootLayout({
             <ul></ul>
           </section>
         </nav>
+
         <main>{children}</main>
       </body>
     </html>
