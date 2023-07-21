@@ -1,9 +1,7 @@
 import { cn } from "@apee/lib/utils";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter } from "@apee/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Antoine Plu",
@@ -20,7 +18,7 @@ export default function RootLayout({
       <body
         className={cn("dark p-4 flex min-h-screen gap-x-4", inter.className)}
       >
-        <nav>
+        <nav className="invisible">
           <form>
             <input type="search" placeholder="Search" name="search" />
           </form>

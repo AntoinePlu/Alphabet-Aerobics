@@ -12,7 +12,8 @@ export default config({
       schema: {
         intro: fields.text({ label: "Intro" }),
         jobTitle: fields.text({ label: "Job Title" }),
-        catchphrase: fields.text({ label: "Catchprase" }),
+        catchphraseLine1: fields.text({ label: "Catchprase (Line 1)" }),
+        catchphraseLine2: fields.text({ label: "Catchprase (Line 2)" }),
         email: fields.text({ label: "Email" }),
       },
     }),

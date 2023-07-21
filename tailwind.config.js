@@ -20,6 +20,12 @@ module.exports = {
         apee: {
           black: "hsl(0, 0%, 7%)",
           darkGray: "hsl(0, 0%, 9%)",
+          gamingYellow: "#ffac30",
+          gamingOrange: "#df5b22",
+          gamingPurple: "#8c35fb",
+          ctaOrange: "#ea504d",
+          ctaYellow: "#d88d20",
+          ctaEgg: "#d8b31f",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

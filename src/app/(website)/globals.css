@@ -77,11 +77,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* Trump Gothic */
-@font-face {
-  font-family: "Trump Gothic";
-  font-weight: 700;
-  src: url("/assets/fonts/TrumpGothicEastBold.woff") format("woff"),
-    url("/assets/fonts/TrumpGothicEastBold.ttf") format("ttf");
-}
