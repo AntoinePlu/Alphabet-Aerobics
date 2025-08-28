@@ -23,7 +23,8 @@ async function get(req, res) {
 async function post(req, res) {
   const { description, name, slug } = req.body;
 
-  await addCollection({ description, name, slug });
+  const collections = await addCollection({ description, name, slug });
+  const sortedCollections = sortCollections(collections).flat();
 
-  return get(req, res);
+  return res.json(sortedCollections);
 }

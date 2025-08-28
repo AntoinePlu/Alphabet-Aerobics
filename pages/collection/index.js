@@ -3,7 +3,7 @@ import Image from "next/image";
 import Hero from "components/Hero";
 import { listCollections, sortCollections } from "lib/collections";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allCollections = await listCollections();
 
   const [featuredCollection, ...collections] = sortCollections(allCollections);
@@ -13,6 +13,7 @@ export async function getServerSideProps() {
       collections,
       featuredCollection,
     },
+    revalidate: 300, // Revalidate every 5 minutes
   };
 }
 
@@ -37,10 +38,11 @@ export default function Collection({ collections, featuredCollection }) {
         <div className="col-span-3 relative">
           <Image
             alt={`${featuredCollection.name} collection cover image`}
-            class="rounded-lg"
+            className="rounded-lg"
             height={400}
             src="https://fakeimg.pl/1140x400/1f2022"
             width={1140}
+            priority
           />
           <div className="p-2 text-white/60 absolute bottom-4 left-4">
             See{" "}
@@ -51,10 +53,10 @@ export default function Collection({ collections, featuredCollection }) {
         </div>
 
         {collections.map((collection) => (
-          <div key={collection.id}>
+          <div key={collection.slug}>
             <Image
               alt={`${collection.name} collection cover image`}
-              class="rounded-lg"
+              className="rounded-lg"
               height={300}
               src="https://fakeimg.pl/400x300/1f2022"
               width={400}
