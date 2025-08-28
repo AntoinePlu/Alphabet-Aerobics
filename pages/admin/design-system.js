@@ -1,6 +1,5 @@
 import { readFile } from "fs/promises";
 
-import { useEffect, useState } from "react";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 
 import * as components from "components";
@@ -8,14 +7,7 @@ import AdminLayout from "layouts/AdminLayout";
 import { notFoundInProduction, sortBy } from "lib/helpers";
 import routes from "lib/routes";
 
-const { Link, Menu } = components;
-
 export default function DesignSystem({ fixtures }) {
-  const [targetComponent, setTargetComponent] = useState("");
-
-  useEffect(() => {
-    setTargetComponent(window.location.hash.slice(1));
-  });
 
   return (
     <div className="space-y-16">

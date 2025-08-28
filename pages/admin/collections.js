@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import Image from "next/image";
 import { EyeIcon, PlusCircleIcon } from "@heroicons/react/solid";
 import useSWR from "swr";
@@ -16,11 +16,44 @@ export default function CollectionsAdmin({ collections: staticCollections }) {
   });
   const [isAddPanelOpen, setIsAddPanelOpen] = useState(false);
 
-  const handleAddCollection = async (ev) => {
+  const handleAddCollection = useCallback(async (ev) => {
     ev.preventDefault();
     await mutate(POST("/api/collections/", formValues(ev.target)), false);
     setIsAddPanelOpen(false);
-  };
+  }, [mutate]);
+
+  const openAddPanel = useCallback(() => setIsAddPanelOpen(true), []);
+  const closeAddPanel = useCallback(() => setIsAddPanelOpen(false), []);
+
+  const collectionItems = useMemo(() => {
+    if (!collections) return [];
+    
+    return collections.map((collection) => (
+      <div key={collection.slug} className="relative">
+        <div className="focusable group block aspect-video w-full">
+          <Image
+            alt={`${collection.name} collection cover image`}
+            className="rounded-lg group-hover:opacity-80"
+            height={300}
+            src="https://fakeimg.pl/400x300/1f2022"
+            width={400}
+            loading="lazy"
+          />
+          <button
+            className="absolute inset-0 focus:outline-none"
+            type="button"
+          >
+            <span className="sr-only">
+              View details for {collection.name}
+            </span>
+          </button>
+        </div>
+        <div className="p-2 text-white/60">
+          <strong className="text-white">{collection.name}</strong>
+        </div>
+      </div>
+    ));
+  }, [collections]);
 
   return (
     <>
@@ -32,7 +65,7 @@ export default function CollectionsAdmin({ collections: staticCollections }) {
           </Link.Button>
         </li>
         <li>
-          <Button primary onClick={() => setIsAddPanelOpen(true)}>
+          <Button primary onClick={openAddPanel}>
             <PlusCircleIcon className="h-5 w-5" />
             <span>Add</span>
           </Button>
@@ -40,30 +73,7 @@ export default function CollectionsAdmin({ collections: staticCollections }) {
       </ul>
 
       <div className="mt-6 grid grid-cols-4 gap-4">
-        {collections.map((collection) => (
-          <div key={collection.slug} className="relative">
-            <div className="focusable group block aspect-video w-full">
-              <Image
-                alt={`${collection.name} collection cover image`}
-                className="rounded-lg group-hover:opacity-80"
-                height={300}
-                src="https://fakeimg.pl/400x300/1f2022"
-                width={400}
-              />
-              <button
-                className="absolute inset-0 focus:outline-none"
-                type="button"
-              >
-                <span className="sr-only">
-                  View details for {collection.name}
-                </span>
-              </button>
-            </div>
-            <div className="p-2 text-white/60">
-              <strong className="text-white">{collection.name}</strong>
-            </div>
-          </div>
-        ))}
+        {collectionItems}
       </div>
 
       <SlideOver
@@ -71,7 +81,7 @@ export default function CollectionsAdmin({ collections: staticCollections }) {
         setIsOpen={setIsAddPanelOpen}
         title="Add Collection"
       >
-        {({ setIsOpen }) => (
+        {() => (
           <>
             <Form
               focusFirst
@@ -99,7 +109,7 @@ export default function CollectionsAdmin({ collections: staticCollections }) {
                 <Button primary type="submit">
                   Save
                 </Button>
-                <Button type="button" onClick={() => setIsOpen(false)}>
+                <Button type="button" onClick={closeAddPanel}>
                   Cancel
                 </Button>
               </div>

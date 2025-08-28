@@ -15,11 +15,6 @@ const MENU = [
   { label: "Curation", path: "/curation" },
 ];
 
-const SOCIAL = [
-  { label: "Twitter", url: "https://twitter.com/AntoinePlu" },
-  { label: "Dribbble", url: "https://dribbble.com/AntoinePlu/" },
-  { label: "Spotify", url: "" },
-];
 
 export default function NavBar({ className }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
